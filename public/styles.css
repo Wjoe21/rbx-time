@@ -1,13 +1,16 @@
-.field{
-    width: 250px;
-    margin-left: 520px;
+button {
+    width: 200px;
 }
 
-#buttonTest{
-    width: 250px;
+#userInput {
+    width: 300px;
 }
 
-#warning{
-    width: 500px;
-    margin-left: 425px;
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
 }

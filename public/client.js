@@ -1,21 +1,17 @@
-const btnTest = document.getElementById("buttonTest")
+const btn = document.getElementById("buttonTest");
 const userInput = document.getElementById("userInput");
-const passInput = document.getElementById("passwordInput");
 
-btnTest.addEventListener("click", function(e){
+btn.addEventListener("click", function(){
     console.log("clicked");
-    const data = {username: userInput.value, password: passInput.value};
-    btnTest.className = "button is-success is-loading";
-    btnTest.setAttribute("disabled", true);
-    fetch("/login", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
+    fetch("http://api.roblox.com/users/get-by-username?username=Builderman", {method: GET})
+     .then(function(res){
+        if(res.ok) return res.json()
+        throw new Error("failed");
     })
-    .then(res => res.json())
-    .then(data => {
-        console.log("success");
+     .then(function(data){
+        console.log(data);
+    })
+     .catch(function(err){
+        throw new Error(err);
     })
 })
