@@ -1,0 +1,16 @@
+{
+  "name": "rbx-time",
+  "version": "1.0.0",
+  "description": "Tracks your play time for the game you are currently in",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Wasif Johar",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.9.1",
+    "express": "^4.17.1"
+  }
+}
